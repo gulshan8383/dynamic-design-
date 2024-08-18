@@ -1,6 +1,7 @@
 import React from 'react'
 import "./skill.scss"
 import {motion} from "framer-motion";
+import pdf from "../../assets/pdf.pdf"
 
 const Skill = () => {
     return (
@@ -13,7 +14,7 @@ const Skill = () => {
                         I am a proficient MERN Stack Developer with expertise in MongoDB, Express.js, React.js, and Node.js. 
                         I specialize in building dynamic, responsive web applications. My passion for coding and attention 
                         to detail ensures the delivery of robust, scalable to meet client needs. </p>
-                    <a href="https://app.luminpdf.com/viewer/65e84f6e780982105b2a6b14"> <motion.button className="text-sm" whileHover={{background:"white"}}>⏫DOWNLOAD CV</motion.button></a>
+                    <a href={pdf} download={pdf}> <motion.button className="text-sm" whileHover={{background:"white"}}>⏫DOWNLOAD CV</motion.button></a>
                 </div>
 
                 {/* development */}

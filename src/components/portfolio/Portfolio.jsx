@@ -52,7 +52,7 @@ const Single = ({ item }) => {
         <section >
             <div className="container">
                 <div className="wrapper">
-                    <div className="imgcontainer  " ref={ref}>
+                    <div className="imgcontainer" ref={ref}>
                         <img src={item.img} alt=""  style={{objectFit:"git"}}/>
                     </div>
                     <motion.div className="textcontainer mt-12  " style={{ y }}>
