@@ -23,13 +23,21 @@ function App() {
     
 
       <Cursor />
-      <section id="Homepage">
+      <section id="Homepage " className="">
+     
      
         <Navbar />
-        <Hero />
+        <div className="z-10">
+       <Hero />
+       </div>
+        <div className="bg-black w-full h-full opacity-40 z-0"></div>
+        
+       
+        
         <div className="absolute inset-0 -z-10 ">
         <ParticlesComponent/>
       </div>
+     
        
         
       </section>
@@ -50,7 +58,7 @@ function App() {
       
      <Portfolio />
      
-       <section id="Calling" className="h-full">
+       <section id="Calling" className="h-full bg-[#0F0F29]">
         <Contact/>
       </section>
 

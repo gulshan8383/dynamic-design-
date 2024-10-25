@@ -93,9 +93,22 @@ const ParticlesComponent = ({ darkMode }) => {
         zIndex: -1, // Ensure particles are on top of the image
       }}
     >
+      {/* Dark overlay */}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: "rgba(0, 0, 0, 0.5)", // Adjust the opacity as needed
+          zIndex: 0, // Ensure overlay is above the background but below particles
+        }}
+      />
       <Particles id="tsparticles" init={init} options={options} />
     </div>
   );
 };
 
 export default ParticlesComponent;
+  

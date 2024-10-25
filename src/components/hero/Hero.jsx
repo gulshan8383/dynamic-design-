@@ -1,6 +1,6 @@
-import "./hero.scss";
+
 import { motion } from "framer-motion";
-import pdf from "../../assets/pdf.pdf"
+import pdf from "../../assets/pdf.pdf";
 
 const textVariants = {
     initial: {
@@ -13,7 +13,6 @@ const textVariants = {
         transition: {
             duration: 1,
             staggerChildren: 0.1,
-
         },
     },
     scrollButton: {
@@ -22,71 +21,59 @@ const textVariants = {
         transition: {
             duration: 2,
             repeat: Infinity,
-        }
-    }
-};
-const sliderVariants = {
-    initial: {
-        x: 0,
-
-    },
-    animate: {
-        x: "-100%",
-        transition: {
-            repeat: Infinity,
-            repeatType: "mirror",
-            duration: 10,
-
-
         },
     },
-
 };
-
-
-
 
 const Hero = () => {
     return (
-        <div className="Hero">
-            <div className="wrappers">
-                <motion.div className="textContainer"
+        <div className="flex flex-col lg:flex-row items-center justify-between lg:mx-[10rem] h-screen overflow-hidden">
+            
+            <div className="flex-1 flex justify-center lg:justify-start p-4">
+                <motion.img
+                    src="/hero22.png"
+                    alt=""
+                    className="lg:h-[30rem] lg:w-[20rem] object-cover"
                     variants={textVariants}
                     initial="initial"
-                    animate="animate">
-                    <motion.h2 className="h2" variants={textVariants}>GULSHAN YADAV</motion.h2>
-                    <motion.h1 className="h1" variants={textVariants}>Web Developer and UI Developer</motion.h1>
-                   <motion.div className="button" variants={textVariants}>
-                   <a href={pdf} download={pdf}><motion.button variants={textVariants} 
-                        whileHover={{
-                            background:"white",
-                            color: "#111132",
-                             boxShadow: "3px 5px 40px #BBB7B7",
-                        }}>
-                        My Resume 
-                        </motion.button>
-                        </a>
-                        <a href="#Contact"><motion.button variants={textVariants}
-                        whileHover={{
-                            background:"white",
-                            color: "#111132",
-                             boxShadow: "3px 5px 40px #BBB7B7",
-                        }}
-                        >Contact me
-                        </motion.button>
-                        </a>
-                    </motion.div>
-                    <motion.img src="./scroll.png" animate="scrollButton" alt="" className="img" variants={textVariants} />
-                </motion.div>
+                    animate="animate"
+                />
             </div>
-            <motion.div className="slidingtextcontainer" variants={sliderVariants} initial="initial" animate="animate">
-                Websites Creator and Developer.
-            </motion.div>
-            <div className="imageContainer" >
-                <motion.img src="/hero22.png" alt=""  variants={textVariants} className="md:h-[80%]"/>
+            <div className="flex-1 flex flex-col items-start p-4">
+                <motion.h2 className="text-2xl md:text-3xl text-orange-500 tracking-wider" variants={textVariants}>
+                    GULSHAN YADAV
+                </motion.h2>
+                <motion.h1 className="text-5xl md:text-6xl text-gray-100" variants={textVariants}>
+                    Web Developer and UI Developer
+                </motion.h1>
+                <motion.div className="flex space-x-4 mt-6">
+                    <a href={pdf} download={pdf}>
+                        <motion.button
+                            className="bg-transparent border-3 border-white rounded-lg py-2 px-4 text-white hover:bg-gray-800 hover:text-white transition duration-300"
+                            variants={textVariants}
+                        >
+                            My Resume
+                        </motion.button>
+                    </a>
+                    <a href="#Contact">
+                        <motion.button
+                            className="bg-transparent border-3 border-white rounded-lg py-2 px-4 text-white hover:bg-gray-800 hover:text-white transition duration-300"
+                            variants={textVariants}
+                        >
+                            Contact me
+                        </motion.button>
+                    </a>
+                </motion.div>
+                <motion.img
+                    src="./scroll.png"
+                    alt=""
+                    className="mt-6 w-12"
+                    animate="scrollButton"
+                    variants={textVariants}
+                />
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Hero
+export default Hero;
