@@ -27,8 +27,8 @@ const textVariants = {
 
 const Hero = () => {
     return (
-        <div className="flex flex-col lg:flex-row items-center justify-between lg:mx-[10rem] h-screen overflow-hidden">
-            
+        <div className="flex flex-row items-center justify-between lg:mx-[10rem]  h-screen overflow-hidden">
+
             <div className="flex-1 flex justify-center lg:justify-start p-4">
                 <motion.img
                     src="/hero22.png"
@@ -40,16 +40,16 @@ const Hero = () => {
                 />
             </div>
             <div className="flex-1 flex flex-col items-start p-4">
-                <motion.h2 className="text-2xl md:text-3xl text-orange-500 tracking-wider" variants={textVariants}>
+                <motion.h2 className="lg:text-2xl md:text-3xl text-xl text-orange-500 tracking-wider" variants={textVariants}>
                     GULSHAN YADAV
                 </motion.h2>
-                <motion.h1 className="text-5xl md:text-6xl text-gray-100" variants={textVariants}>
+                <motion.h1 className="lg:text-5xl md:text-6xl text-2xl text-gray-100" variants={textVariants}>
                     Web Developer and UI Developer
                 </motion.h1>
-                <motion.div className="flex space-x-4 mt-6">
+                <motion.div className="lg:flex lg:flex-row md:flex md:flex-row flex flex-col gap-4 mt-6">
                     <a href={pdf} download={pdf}>
                         <motion.button
-                            className="bg-transparent border-3 border-white rounded-lg py-2 px-4 text-white hover:bg-gray-800 hover:text-white transition duration-300"
+                            className="bg-transparent border-2 border-white rounded-lg py-2 px-4 text-white hover:bg-gray-800 hover:text-white transition duration-300"
                             variants={textVariants}
                         >
                             My Resume
@@ -57,12 +57,13 @@ const Hero = () => {
                     </a>
                     <a href="#Contact">
                         <motion.button
-                            className="bg-transparent border-3 border-white rounded-lg py-2 px-4 text-white hover:bg-gray-800 hover:text-white transition duration-300"
+                            className="bg-transparent border-2 border-white rounded-lg py-2 px-4 text-white hover:bg-gray-800 hover:text-white transition duration-300"
                             variants={textVariants}
                         >
                             Contact me
                         </motion.button>
                     </a>
+
                 </motion.div>
                 <motion.img
                     src="./scroll.png"

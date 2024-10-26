@@ -77,11 +77,11 @@ const Contact = () => {
             </motion.div>
 
             <div className="formcontainer z-50 ">
-                <motion.div className="phonesvg lg:w-[450px] lg:h-[450px]"
+                <motion.div className="phonesvg lg:w-[450px]"
                     initial={{ opacity: 1 }}
                     whileInView={{ opacity: 0 }}
                     transition={{ delay: 3, duration: 1 }}>
-                    <svg width="450px" height="450px" viewBox="0 0 35 35" fill="#f29c07" stroke="#f29c07" strokeWidth="0. 0035" transform="rotate(1)">
+                    <svg width="300px"  viewBox="0 0 35 35" fill="#f29c07" stroke="#f29c07" strokeWidth="0. 0035" transform="rotate(1)">
 
 
                         <motion.path
